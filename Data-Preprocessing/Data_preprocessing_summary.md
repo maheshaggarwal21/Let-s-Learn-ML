@@ -57,7 +57,7 @@ le = LabelEncoder()
 y =  np.array(le.fit_transform(y))
 ```
 
-## `Step-4` : Splitting Data into Training and Test Set
+## `Step-5` : Splitting Data into Training and Test Set
 
 - using train_test_split form sklearn.momdel_selection
 - any value of random state usable , it just ensures we get the same taining and test set whether how many times we run the code
@@ -67,7 +67,7 @@ y =  np.array(le.fit_transform(y))
 from sklearn.model_selection import train_test_split
 X_train , X_test , y_train, y_test = train_test_split(X,y,test_size = 0.2 , random_state = 42)
 ```
-## `Step-5` : Feature Enhancing 
+## `Step-6` : Feature Enhancing 
 
 - should be done after splitting to ensure that the model has no info regarding the test set
 - fit method applied to only train set while transform applied to both train and test
