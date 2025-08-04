@@ -59,7 +59,7 @@ y =  np.array(le.fit_transform(y))
 
 ## `Step-5` : Splitting Data into Training and Test Set
 
-- using train_test_split form sklearn.momdel_selection
+- using train_test_split from sklearn.model_selection
 - any value of random state usable , it just ensures we get the same taining and test set whether how many times we run the code
 - 0.2 -> 20%
 
