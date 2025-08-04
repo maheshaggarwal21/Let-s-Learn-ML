@@ -4,7 +4,7 @@
 
 - Import the data using pandas using either read_csv or read_excel function based on your data file
 
-```bash
+```python
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
