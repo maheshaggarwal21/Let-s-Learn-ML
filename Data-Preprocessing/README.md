@@ -78,7 +78,7 @@ X_train , X_test , y_train, y_test = train_test_split(X,y,test_size = 0.2 , rand
 - basically two types - normalisation and standardization
 - normalization -> value ranges from [0,1]
 - standardization -> value ranges from [-3,3]
-- standardization is preferred before evergreen
+- standardization is preferred because normalisation is good only when your data forms normal distribution
 
 ```bash
 from sklearn.preprocessing import StandardScaler
