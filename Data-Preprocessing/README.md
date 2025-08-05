@@ -17,7 +17,7 @@ data = pd.read_csv("Data.csv")
 - independent variables are those based on those prediction will be made (all except purchased in this case)
 - dependent variables are those whose value is to be predicted (purchased in this case)
 
-```bash
+```python
 X = data.iloc[:,:-1].values
 y = data.iloc[:,-1].values
 ```
@@ -28,7 +28,7 @@ y = data.iloc[:,-1].values
  - Fit method calculates the mean / median of input data and sets it to the imputer
  - Transform method replaces the missing values in the data and return a copy of corrected data , it doesn't alter the original data(X)
 
-```bash
+```python
 from sklearn.impute import SimpleImputer
 imputer = SimpleImputer(missing_values = np.nan , strategy = "mean")
 imputer.fit(X[:,1:])
@@ -40,7 +40,7 @@ X[:,1:] = imputer.transform(X[:,1:])
 - basically giving numerical values to non-numerical columns and splitting them for better rendering by model
 - using two tools - ColumnTransformer and OneHotEncoder
 
-```bash
+```python
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 
@@ -51,7 +51,7 @@ X = np.array(ct.fit_transform(X))
 - now for the purchased column we have to just label the unique values with numerical values (for example yes-1 , no-0) , no column split
 - therefore using LabelEncoder
 
-```bash
+```python
 from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
 y =  np.array(le.fit_transform(y))
@@ -63,7 +63,7 @@ y =  np.array(le.fit_transform(y))
 - any value of random state usable , it just ensures we get the same taining and test set whether how many times we run the code
 - 0.2 -> 20%
 
-```bash
+```python
 from sklearn.model_selection import train_test_split
 X_train , X_test , y_train, y_test = train_test_split(X,y,test_size = 0.2 , random_state = 42)
 ```
@@ -80,7 +80,7 @@ X_train , X_test , y_train, y_test = train_test_split(X,y,test_size = 0.2 , rand
 - standardization -> value ranges from [-3,3]
 - standardization is preferred because normalisation is good only when your data forms normal distribution
 
-```bash
+```python
 from sklearn.preprocessing import StandardScaler
 ss =  StandardScaler()
 ss.fit(X_train[:,3:])
