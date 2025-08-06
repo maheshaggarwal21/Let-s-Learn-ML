@@ -4,9 +4,6 @@
 
 ## Step-1 : Data Loading And Preprocessing
 
-- general equation -> y = a0 + a1*x1 + a2*x2 + a3*x3 + ... + an*xn
-- no need of feature scaling as auto managed by LinearRegression
-
 ```python
 import numpy as np
 import pandas as pd
